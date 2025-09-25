@@ -1,5 +1,5 @@
 {
-    "status": "closed",
-    "fields": "closed",
+    "field1": "closed",
+    "field2": "closed",
     "pin": "1776"
 }

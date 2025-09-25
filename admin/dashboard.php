@@ -9,22 +9,22 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 $dataFile = '../status_data.json';
 $data = json_decode(file_get_contents($dataFile), true);
 
-$status = $data['status'] ?? 'closed';
-$fields = $data['fields'] ?? 'closed';
+$status = $data['field1'] ?? 'closed';
+$fields = $data['field2'] ?? 'closed';
 
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $updated = false;
 
-    if (isset($_POST['status']) && in_array($_POST['status'], ['open', 'closed'])) {
-        $data['status'] = $_POST['status'];
-        $status = $_POST['status'];
+    if (isset($_POST['field1']) && in_array($_POST['field1'], ['open', 'closed'])) {
+        $data['field1'] = $_POST['field1'];
+        $status = $_POST['field1'];
         $updated = true;
     }
-    if (isset($_POST['fields']) && in_array($_POST['fields'], ['open', 'closed'])) {
-        $data['fields'] = $_POST['fields'];
-        $fields = $_POST['fields'];
+    if (isset($_POST['field2']) && in_array($_POST['field2'], ['open', 'closed'])) {
+        $data['field2'] = $_POST['field2'];
+        $fields = $_POST['field2'];
         $updated = true;
     }
 
@@ -289,15 +289,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="field-group" aria-labelledby="system-status-label">
           <h2 id="system-status-label">Parkersburg Status</h2>
           <div class="buttons">
-            <button type="submit" name="status" value="open" class="open" aria-pressed="<?= $status === 'open' ? 'true' : 'false' ?>">Open</button>
-            <button type="submit" name="status" value="closed" class="closed" aria-pressed="<?= $status === 'closed' ? 'true' : 'false' ?>">Closed</button>
+            <button type="submit" name="field1" value="open" class="open" aria-pressed="<?= $status === 'open' ? 'true' : 'false' ?>">Open</button>
+            <button type="submit" name="field1" value="closed" class="closed" aria-pressed="<?= $status === 'closed' ? 'true' : 'false' ?>">Closed</button>
           </div>
         </div>
         <div class="field-group" aria-labelledby="fields-status-label">
           <h2 id="fields-status-label">Williamstown Status</h2>
           <div class="buttons">
-            <button type="submit" name="fields" value="open" class="open" aria-pressed="<?= $fields === 'open' ? 'true' : 'false' ?>">Open</button>
-            <button type="submit" name="fields" value="closed" class="closed" aria-pressed="<?= $fields === 'closed' ? 'true' : 'false' ?>">Closed</button>
+            <button type="submit" name="field2" value="open" class="open" aria-pressed="<?= $fields === 'open' ? 'true' : 'false' ?>">Open</button>
+            <button type="submit" name="field2" value="closed" class="closed" aria-pressed="<?= $fields === 'closed' ? 'true' : 'false' ?>">Closed</button>
           </div>
         </div>
       </form>

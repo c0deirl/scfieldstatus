@@ -192,11 +192,11 @@ Williamstown, WV 26187</p>
     <div class="status-container">
       <div class="status-box status-<?= htmlspecialchars($status === 'open' ? 'open' : 'closed') ?>">
         <div class="status-label">Parkersburg</div>
-        <?= htmlspecialchars(strtoupper($status)) ?>
+        <?= htmlspecialchars(strtoupper($field1)) ?>
       </div>
       <div class="status-box status-<?= htmlspecialchars($fields === 'open' ? 'open' : 'closed') ?>">
         <div class="status-label">Williamstown</div>
-        <?= htmlspecialchars(strtoupper($fields)) ?>
+        <?= htmlspecialchars(strtoupper($field2)) ?>
       </div>
     </div>
     <a href="admin/login.php" style="background-color:#000000" aria-label="Go to Admin Login">Admin Login</a>

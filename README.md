@@ -26,7 +26,17 @@ A simple web application to report the status of a soccer field online. Features
   - "pin": "new_pin_here"
   - "field_1": "OPEN" or "CLOSED"
   - "field_2": "OPEN" or "CLOSED"
-  - These are the initial states, once you log into the admin panel and change them, they will be dynamically adjusted.
+  - These are the initial states, once you log into the admin panel and change them, they will be dynamically adjusted.  
+
+- Edit `index.php` to change:
+  - Line 11 - Site Title
+  - Line 179-189 - Field Addresses (if two)
+  - Line 194 & 198 - Field Titles  
+
+- Edit `/admin/dashboard.php` to change:
+  - Line 272 - Dashboard Title
+  - Line 279 & 282 - Field Titles
+  - Line 290 & 297 - Field Titles  
   
 ## File Structure
 - index.php: Main page
