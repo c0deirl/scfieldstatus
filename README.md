@@ -2,6 +2,10 @@
 
 ## Description
 A simple web application to report the status of a soccer field online. Features a PIN-protected admin dashboard to update the field status.
+## Screenshots  
+
+<img width="1349" height="859" alt="Screenshot 2025-09-25 102251" src="https://github.com/user-attachments/assets/3a715d98-ff55-472d-b3f4-ea81e676249d" />
+
 
 ## Features
 - PIN login system (PIN can be set in status_data.json)
